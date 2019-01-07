@@ -26,6 +26,9 @@ compile_commands.json
 /out*
 /prebuilt/downloads/*.stamp
 /prebuilt/downloads/clang+llvm-x86_64-linux.zip
+/prebuilt/downloads/aarch64-elf-6.3.0-Linux-x86_64
+/prebuilt/downloads/clang+llvm-x86_64-linux
+/prebuilt/downloads/x86_64-elf-6.3.0-Linux-x86_64
 /prebuilt/config.mk
 /prebuilt/config.mk.bak
 /AnalysisResult/

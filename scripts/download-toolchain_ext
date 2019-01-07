@@ -118,7 +118,8 @@ function downloadClangToolchain() {
     #curl --progress-bar -continue-at=- --location --output "${tool_path}" "${prebuilt_url}"
     #rm -rf -- "${tool_name}"
     echo "Unpacking ${tool_path}"
-    unzip -q -d "${INSTALL_DIR}/${tool_name}" "${tool_path}"
+    #unzip -q -d "${INSTALL_DIR}/${tool_name}" "${tool_path}"
+    cat $INSTALL_DIR/clang+llvm-x86_64-linux.tar.bz2.a* | tar xj
     echo "${required_version}" > "${stamp_path}"
   fi
 
@@ -140,8 +141,8 @@ for target in "${TARGETS[@]}"; do
 done
 
 # Clang supports all the targets.
-cat $INSTALL_DIR/clang+llvm-x86_64-linux.tar.bz2.a* | tar xj
-#downloadClangToolchain
+#cat $INSTALL_DIR/clang+llvm-x86_64-linux.tar.bz2.a* | tar xj
+downloadClangToolchain
 
 # Clear old config lines from prebuilt/config.mk.
 readonly ENV_MK="${PREBUILTS_DIR}/config.mk"
