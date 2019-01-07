@@ -24,7 +24,8 @@ compile_commands.json
 /benchmarks/
 /infra/.recipe_deps
 /out*
-/prebuilt/downloads/
+/prebuilt/downloads/*.stamp
+/prebuilt/downloads/clang+llvm-x86_64-linux.zip
 /prebuilt/config.mk
 /prebuilt/config.mk.bak
 /AnalysisResult/
