@@ -140,7 +140,8 @@ for target in "${TARGETS[@]}"; do
 done
 
 # Clang supports all the targets.
-downloadClangToolchain
+cat $INSTALL_DIR/clang+llvm-x86_64-linux.tar.bz2.a* | tar xj
+#downloadClangToolchain
 
 # Clear old config lines from prebuilt/config.mk.
 readonly ENV_MK="${PREBUILTS_DIR}/config.mk"
